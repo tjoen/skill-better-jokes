@@ -1,4 +1,4 @@
-# PROJECT_NAME skill
+# Mycroft Today in History - Event skill
 
 This skill does ...
 
