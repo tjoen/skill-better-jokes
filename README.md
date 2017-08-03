@@ -1,17 +1,14 @@
 # Mycroft Today in History - Event skill
 
-This skill does ...
-
-To get this done we need
-  - This
-  - That
-  - The other thing
+This skill gives back a event from today in history. It uses http://history.muffinlabs.com/#api for the results
 
 
 ## Current state
 
 Working features:
- - ...
+ - what event happened this day in history
+ - this day in history
+ - today in history
 
 Known issues:
  - ...
