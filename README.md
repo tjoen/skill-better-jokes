@@ -1,14 +1,13 @@
-# Mycroft Today in History - Event skill
+# Mycroft Better Joke skill
 
-This skill gives back a event from today in history. It uses http://history.muffinlabs.com/#api for the results
+This skill gives mycroft better jokes. It uses icanhazdadjoke.com for the results
 
 
 ## Current state
 
 Working features:
- - what event happened this day in history
- - this day in history
- - today in history
+ - be funny
+ - tell a joke
 
 Known issues:
  - ...
