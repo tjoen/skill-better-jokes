@@ -1,7 +1,7 @@
 {
-  "utterance": "this day in history",
+  "utterance": "be funny",
   "intent_type": "RandomEventIntent",
   "intent": {
-    "RandomEventKeyword": "this day in history"
+    "RandomEventKeyword": "be funny"
   }
 }
