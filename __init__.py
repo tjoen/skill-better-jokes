@@ -30,7 +30,7 @@ from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
 import requests
 
-__author__ = 'brihopki'
+__author__ = 'tjoen'
 
 # Logger: used for debug lines, like "LOGGER.debug(xyz)". These
 # statements will show up in the command line when running Mycroft.
@@ -39,11 +39,11 @@ LOGGER = getLogger(__name__)
 # The logic of each skill is contained within its own class, which inherits
 # base methods from the MycroftSkill class with the syntax you can see below:
 # "class ____Skill(MycroftSkill)"
-class TodayHistorySkill(MycroftSkill):
+class BetterJokeSkill(MycroftSkill):
 
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
-        super(TodayHistorySkill, self).__init__(name="TodayHistorySkill")
+        super(BetterJokeSkill, self).__init__(name="BetterJokeSkill")
 
     # This method loads the files needed for the skill's functioning, and
     # creates and registers each intent that the skill uses
@@ -63,12 +63,13 @@ class TodayHistorySkill(MycroftSkill):
     # of a file in the dialog folder, and Mycroft speaks its contents when
     # the method is called.
     def handle_random_event_intent(self, message):
-        url = 'http://history.muffinlabs.com/date'
+        url = 'https://icanhazdadjoke.com'
         r = requests.get(url)
-        json_output = r.json()
-        output = json_output['data']
-        events = output['Events']
-        self.speak("Today in history event {} occurred.".format(events[0]['text']))
+        #json_output = r.json()
+        c = r.text()
+        #output = json_output['data']
+        #events = output['Events']
+        self.speak( c )
 
 
     # The "stop" method defines what Mycroft does when told to stop during
@@ -81,4 +82,4 @@ class TodayHistorySkill(MycroftSkill):
 # The "create_skill()" method is used to create an instance of the skill.
 # Note that it's outside the class itself.
 def create_skill():
-    return TodayHistorySkill()
+    return BetterJokeSkill()
