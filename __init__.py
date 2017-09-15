@@ -66,12 +66,6 @@ class BetterJokeSkill(MycroftSkill):
         url = "https://icanhazdadjoke.com/"
         headers = {'Accept': 'text/plain'}
         r = requests.get(url, headers=headers)
-        # = 'https://icanhazdadjoke.com'
-        #r = requests.get(url)
-        #json_output = r.json()
-        # c = r.text()
-        #output = json_output['data']
-        #events = output['Events']
         self.speak( r.text )
 
 
