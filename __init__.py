@@ -63,13 +63,16 @@ class BetterJokeSkill(MycroftSkill):
     # of a file in the dialog folder, and Mycroft speaks its contents when
     # the method is called.
     def handle_random_event_intent(self, message):
-        url = 'https://icanhazdadjoke.com'
-        r = requests.get(url)
+        url = "https://icanhazdadjoke.com/"
+        headers = {'Accept': 'text/plain'}
+        r = requests.get(url, headers=headers)
+        # = 'https://icanhazdadjoke.com'
+        #r = requests.get(url)
         #json_output = r.json()
-        c = r.text()
+        # c = r.text()
         #output = json_output['data']
         #events = output['Events']
-        self.speak( c )
+        self.speak( r.text )
 
 
     # The "stop" method defines what Mycroft does when told to stop during
