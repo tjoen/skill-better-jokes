@@ -66,9 +66,14 @@ class BetterJokeSkill(MycroftSkill):
         url = "https://icanhazdadjoke.com/"
         headers = {'Accept': 'text/plain'}
         r = requests.get(url, headers=headers)
-        self.speak( r.text )
-
-
+        txt = r.text.encode('ascii',errors='ignore')
+        replacements = (',', '-', '!', '?', '.')
+        for f in replacements:
+            txt=txt.replace(f, '|')
+        data = txt.split("|")
+        for temp in data:
+        #    print temp
+            self.speak( temp )
     # The "stop" method defines what Mycroft does when told to stop during
     # the skill's execution. In this case, since the skill's functionality
     # is extremely simple, the method just contains the keyword "pass", which
