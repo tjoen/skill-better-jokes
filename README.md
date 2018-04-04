@@ -10,6 +10,7 @@ This skill gives mycroft better jokes. It uses icanhazdadjoke.com to get the jok
 
 ## Credits 
 Theun Kohlbeck - https://github.com/tjoen
+German translation by Andreas Reinle - https://github.com/gras64
 
 ## Require 
 platform_mark1 platform_picroft platform_plasmoid 
