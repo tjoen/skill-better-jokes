@@ -66,7 +66,7 @@ class BetterJokeSkill(MycroftSkill):
         url = "https://icanhazdadjoke.com/"
         headers = {'Accept': 'text/plain'}
         r = requests.get(url, headers=headers)
-        txt = r.text.encode('ascii',errors='ignore')
+        txt = str(r.text)
         replacements = (',', '-', '!', '?', '.')
         for f in replacements:
             txt=txt.replace(f, '|')
